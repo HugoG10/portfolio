@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Hugo Guerra is a computer science student at Cal Poly Pomona. Portfolio of data analysis projects in SQL, Python, R, Excel, and Power BI."
+    />
+    <meta name="theme-color" content="#f3efe6" />
+    <title>Hugo Guerra — Computer Science Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,560;0,9..144,640;1,9..144,520&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23145c49'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Georgia' font-size='13' fill='%23f3efe6'%3EHG%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#work">Skip to projects</a>
+
+    <header class="site-header" id="top">
+      <a class="wordmark" href="#top">Hugo Guerra</a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        Menu
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="#work">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#background">Background</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="header-mail" href="mailto:hugoguerra205@gmail.com">Email</a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="kicker">Computer Science · Cal Poly Pomona</p>
+        <h1 id="hero-title">
+          <span>Hugo</span>
+          <span class="name-italic">Guerra</span>
+        </h1>
+        <p class="lede">
+          I study computer science and use it on messy datasets — job postings,
+          sales, customer churn, and housing prices. Each project below leads
+          with what the analysis was for, then how it was done.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">View the projects</a>
+          <a class="button button-ghost" href="https://github.com/hugog10" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="button button-ghost" href="https://www.linkedin.com/in/hugoguerra205" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <dl class="facts">
+          <div>
+            <dt>Degree</dt>
+            <dd>B.S. Computer Science</dd>
+          </div>
+          <div>
+            <dt>GPA</dt>
+            <dd>3.83 / 4.0</dd>
+          </div>
+          <div>
+            <dt>Graduation</dt>
+            <dd>May 2028</dd>
+          </div>
+          <div>
+            <dt>Based in</dt>
+            <dd>Montclair, CA</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="work" id="work" aria-labelledby="work-title">
+        <div class="section-head">
+          <h2 id="work-title">Projects</h2>
+          <p id="work-count" aria-live="polite">5 projects</p>
+        </div>
+        <p class="section-intro">
+          Five analyses from my resume, newest first. Filter by the tool if you
+          only want one slice of the work.
+        </p>
+
+        <div class="filters" role="toolbar" aria-label="Filter projects by tool">
+          <button type="button" class="filter" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter" data-filter="sql" aria-pressed="false">SQL</button>
+          <button type="button" class="filter" data-filter="python" aria-pressed="false">Python</button>
+          <button type="button" class="filter" data-filter="r" aria-pressed="false">R</button>
+          <button type="button" class="filter" data-filter="excel" aria-pressed="false">Excel</button>
+          <button type="button" class="filter" data-filter="powerbi" aria-pressed="false">Power BI</button>
+        </div>
+
+        <div class="index" id="project-index">
+          <a class="index-card" href="#job-market" data-tags="sql">
+            <span class="index-num">01</span>
+            <span class="index-name">Job market</span>
+            <span class="index-hook">SQL in 7,291 postings</span>
+          </a>
+          <a class="index-card" href="#ecommerce" data-tags="excel">
+            <span class="index-num">02</span>
+            <span class="index-name">E-commerce</span>
+            <span class="index-hook">Products, regions, profit</span>
+          </a>
+          <a class="index-card" href="#sales" data-tags="powerbi">
+            <span class="index-num">03</span>
+            <span class="index-name">Sales dashboard</span>
+            <span class="index-hook">Revenue, margin, growth</span>
+          </a>
+          <a class="index-card" href="#churn" data-tags="python">
+            <span class="index-num">04</span>
+            <span class="index-name">Customer churn</span>
+            <span class="index-hook">Contract, tenure, charges</span>
+          </a>
+          <a class="index-card" href="#housing" data-tags="r">
+            <span class="index-num">05</span>
+            <span class="index-name">Housing prices</span>
+            <span class="index-hook">Linear vs. quadratic</span>
+          </a>
+        </div>
+
+        <div class="projects">
+          <article class="project" id="job-market" data-tags="sql">
+            <div class="project-copy">
+              <p class="project-kicker"><span>01</span> June 2026 — September 2026</p>
+              <h3>Data Analyst Job Market Analysis</h3>
+              <p class="stat">
+                <span class="stat-num">7,291</span>
+                <span class="stat-label">remote data analyst postings that list SQL — more than any other skill in the dataset.</span>
+              </p>
+              <ul class="tags" aria-label="Tools">
+                <li>SQL</li>
+                <li>PostgreSQL</li>
+              </ul>
+              <ul class="points">
+                <li>Analyzed job-posting data using SQL and PostgreSQL to identify high-paying data analyst roles, in-demand skills, and relationships between technical skills and salaries.</li>
+                <li>Built queries with JOINs, CTEs, GROUP BY, aggregate functions, filtering, and sorting to pull job-market trends.</li>
+                <li>Identified SQL, Excel, Python, Tableau, and Power BI as the five most in-demand skills for remote data analyst positions.</li>
+                <li>Set skill demand next to average salary to find technologies that combine hiring demand with pay.</li>
+              </ul>
+            </div>
+            <aside class="dossier dossier-accent">
+              <p class="dossier-label">Five most in-demand</p>
+              <ol class="rank">
+                <li class="rank-lead">
+                  <span>SQL</span>
+                  <strong>7,291 postings</strong>
+                </li>
+                <li><span>Excel</span></li>
+                <li><span>Python</span></li>
+                <li><span>Tableau</span></li>
+                <li><span>Power BI</span></li>
+              </ol>
+              <p class="dossier-note">Listed in the order named in the analysis. The posting count is reported for SQL.</p>
+            </aside>
+          </article>
+
+          <article class="project" id="ecommerce" data-tags="excel">
+            <div class="project-copy">
+              <p class="project-kicker"><span>02</span> April 2026 — June 2026</p>
+              <h3>E-Commerce Sales Analysis &amp; Dashboard</h3>
+              <p class="finding">An Excel dashboard for revenue, profitability, products, and regional sales — built so the top performers are easy to see.</p>
+              <ul class="tags" aria-label="Tools">
+                <li>Excel</li>
+                <li>Power Query</li>
+                <li>PivotTables</li>
+              </ul>
+              <ul class="points">
+                <li>Cleaned and transformed e-commerce sales data with Excel and Power Query so the numbers were consistent before analysis.</li>
+                <li>Analyzed revenue, profitability, product performance, and regional sales trends with PivotTables and Excel formulas.</li>
+                <li>Built an interactive dashboard with PivotCharts, slicers, and KPI metrics for business performance and sales trends.</li>
+                <li>Identified top-performing products, categories, and regions, and turned those findings into business insights.</li>
+              </ul>
+            </div>
+            <aside class="dossier">
+              <p class="dossier-label">What the dashboard covers</p>
+              <ul class="dossier-list">
+                <li>Revenue</li>
+                <li>Profitability</li>
+                <li>Product performance</li>
+                <li>Regional sales trends</li>
+              </ul>
+              <p class="dossier-note">PivotCharts, slicers, and KPI metrics on top of cleaned sales data.</p>
+            </aside>
+          </article>
+
+          <article class="project" id="sales" data-tags="powerbi">
+            <div class="project-copy">
+              <p class="project-kicker"><span>03</span> February 2026 — April 2026</p>
+              <h3>Executive Sales Performance Dashboard</h3>
+              <p class="finding">A Power BI view of sales across products, regions, and time, with DAX measures for the numbers an executive team actually watches.</p>
+              <ul class="tags" aria-label="Tools">
+                <li>Power BI</li>
+                <li>DAX</li>
+                <li>Power Query</li>
+              </ul>
+              <ul class="points">
+                <li>Designed an interactive Power BI dashboard to evaluate sales performance across products, regions, and time periods.</li>
+                <li>Built DAX measures for revenue, profit margin, average order value, and sales growth.</li>
+                <li>Cleaned and transformed the raw data in Power Query and added dynamic filters for closer performance cuts.</li>
+              </ul>
+            </div>
+            <aside class="dossier">
+              <p class="dossier-label">KPI measures</p>
+              <ul class="dossier-list">
+                <li>Revenue</li>
+                <li>Profit margin</li>
+                <li>Average order value</li>
+                <li>Sales growth</li>
+              </ul>
+              <p class="dossier-note">Filtered by product, region, and time period.</p>
+            </aside>
+          </article>
+
+          <article class="project" id="churn" data-tags="python">
+            <div class="project-copy">
+              <p class="project-kicker"><span>04</span> December 2025 — February 2026</p>
+              <h3>Customer Churn Analysis</h3>
+              <p class="finding">Exploratory analysis of who leaves, compared across contract type, tenure, monthly charges, and how customers use the service.</p>
+              <ul class="tags" aria-label="Tools">
+                <li>Python</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+              </ul>
+              <ul class="points">
+                <li>Analyzed customer data with Python and Pandas to find patterns and factors associated with churn.</li>
+                <li>Cleaned and explored demographic, account, and service fields before looking for those patterns.</li>
+                <li>Compared churn across contract types, customer tenure, monthly charges, and service usage.</li>
+                <li>Used Matplotlib to show the trends and the segments with higher churn rates.</li>
+              </ul>
+            </div>
+            <aside class="dossier">
+              <p class="dossier-label">Compared across</p>
+              <ul class="dossier-list">
+                <li>Contract type</li>
+                <li>Customer tenure</li>
+                <li>Monthly charges</li>
+                <li>Service usage</li>
+              </ul>
+              <p class="dossier-note">Charts highlight the segments where churn runs higher.</p>
+            </aside>
+          </article>
+
+          <article class="project" id="housing" data-tags="r">
+            <div class="project-copy">
+              <p class="project-kicker"><span>05</span> November 2025 — December 2025</p>
+              <h3>Housing Price Analysis</h3>
+              <p class="finding">Linear and quadratic regression models for home prices, scored against each other with R² and AIC, then written up as a technical report.</p>
+              <ul class="tags" aria-label="Tools">
+                <li>R</li>
+                <li>Regression</li>
+              </ul>
+              <ul class="points">
+                <li>Analyzed housing market data in R to identify factors that influence home prices.</li>
+                <li>Built and evaluated linear and quadratic regression models to predict prices.</li>
+                <li>Compared the models with R² and Akaike Information Criterion (AIC).</li>
+                <li>Made visualizations to show the trends and support the statistical conclusions.</li>
+                <li>Documented the methodology, analysis, and results in a technical report.</li>
+              </ul>
+            </div>
+            <aside class="dossier">
+              <p class="dossier-label">Models compared</p>
+              <ul class="dossier-list">
+                <li>Linear regression</li>
+                <li>Quadratic regression</li>
+              </ul>
+              <p class="dossier-label dossier-label-spaced">Scored with</p>
+              <ul class="dossier-list">
+                <li>R²</li>
+                <li>AIC</li>
+              </ul>
+              <p class="dossier-note">Findings, method, and charts are written up in a technical report.</p>
+            </aside>
+          </article>
+        </div>
+
+        <p class="filter-empty" id="filter-empty" hidden>
+          Nothing in this set uses that tool. Choose another filter to bring the projects back.
+        </p>
+      </section>
+
+      <section class="skills" id="skills" aria-labelledby="skills-title">
+        <div class="section-head">
+          <h2 id="skills-title">Skills</h2>
+        </div>
+        <div class="skill-grid">
+          <article class="skill-group">
+            <h3>Languages</h3>
+            <ul>
+              <li>Python</li>
+              <li>SQL</li>
+              <li>R</li>
+              <li>Java</li>
+              <li>JavaScript</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Frameworks</h3>
+            <ul>
+              <li>Pandas</li>
+              <li>Matplotlib</li>
+              <li>NumPy</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Databases</h3>
+            <ul>
+              <li>PostgreSQL</li>
+              <li>SQLite</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Developer tools</h3>
+            <ul>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Docker</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Technologies</h3>
+            <ul>
+              <li>REST APIs</li>
+              <li>GitHub Pages</li>
+              <li>AWS</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Data analysis</h3>
+            <ul>
+              <li>Excel</li>
+              <li>Power BI</li>
+              <li>Power Query</li>
+              <li>DAX</li>
+              <li>PivotTables</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="background" id="background" aria-labelledby="background-title">
+        <div class="section-head">
+          <h2 id="background-title">Background</h2>
+        </div>
+        <div class="background-grid">
+          <article class="panel">
+            <p class="panel-kicker">Education · May 2028</p>
+            <h3>California State Polytechnic University, Pomona</h3>
+            <p class="panel-role">College of Science · Bachelor of Science in Computer Science</p>
+            <p class="panel-meta">Cumulative GPA 3.83 / 4.0</p>
+            <h4>Relevant coursework</h4>
+            <ul class="course-list">
+              <li>Probability and Statistics for Computer Scientists and Engineers</li>
+              <li>Software Engineering</li>
+              <li>Formal Languages and Automata</li>
+              <li>Data Structures and Algorithms</li>
+              <li>Computer Networks</li>
+            </ul>
+          </article>
+
+          <div class="experience">
+            <article class="panel">
+              <p class="panel-kicker">October 2025 — December 2025</p>
+              <h3>Stock Associate</h3>
+              <p class="panel-role">Burlington</p>
+              <ul class="points">
+                <li>Helped customers and answered questions in a high-volume retail environment.</li>
+                <li>Worked with the team to meet daily operational goals and keep store standards.</li>
+              </ul>
+            </article>
+            <article class="panel">
+              <p class="panel-kicker">Spring 2024, 2025</p>
+              <h3>Volunteer</h3>
+              <p class="panel-role">Miles For Montclair</p>
+              <ul class="points">
+                <li>Worked with other volunteers to encourage campus-wide participation and community engagement.</li>
+                <li>Contributed to fundraising that supported student assistance programs.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <p class="kicker">Contact</p>
+        <h2 id="contact-title">Let’s talk about the work.</h2>
+        <p class="lede contact-lede">
+          Email is the fastest way to reach me. LinkedIn and GitHub are below if you want the longer trail.
+        </p>
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:hugoguerra205@gmail.com">hugoguerra205@gmail.com</a>
+          <button class="button button-ghost" type="button" id="copy-email">Copy email</button>
+        </div>
+        <ul class="contact-list">
+          <li>
+            <a href="https://www.linkedin.com/in/hugoguerra205" target="_blank" rel="noopener noreferrer">linkedin.com/in/hugoguerra205</a>
+          </li>
+          <li>
+            <a href="https://github.com/hugog10" target="_blank" rel="noopener noreferrer">github.com/hugog10</a>
+          </li>
+          <li>
+            <a href="tel:+19097611863">(909) 761-1863</a>
+          </li>
+          <li>Montclair, CA 91763</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Hugo Guerra · Computer Science · Cal Poly Pomona</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
