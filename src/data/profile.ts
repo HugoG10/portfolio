@@ -36,6 +36,20 @@ export const profile = {
     "Cybersecurity, long term",
   ],
   languages: ["English", "Spanish"],
+  certifications: [
+    {
+      name: "CompTIA A+",
+      status: "In progress",
+      detail:
+        "Studying computer hardware, operating systems, networking, troubleshooting, and IT support fundamentals. I have not taken the exam.",
+    },
+    {
+      name: "Google IT Support Professional Certificate",
+      status: "In progress",
+      detail:
+        "Working through Google's IT support program. I have not finished the certificate.",
+    },
+  ],
 } as const;
 
 export const navLinks = [

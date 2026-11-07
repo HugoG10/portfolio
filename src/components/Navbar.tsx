@@ -68,7 +68,7 @@ export function Navbar() {
                 key={link.id}
                 to={`/#${link.id}`}
                 aria-current={current ? "true" : undefined}
-                className={`text-sm no-underline ${current ? "text-ink" : "text-muted hover:text-ink"}`}
+                className={`text-base no-underline ${current ? "text-ink" : "text-muted hover:text-ink"}`}
               >
                 {link.label}
               </Link>

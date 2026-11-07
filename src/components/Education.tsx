@@ -8,7 +8,7 @@ export function Education() {
         <SectionHeading
           id="education-title"
           index="05 — Education"
-          title="School, honors, and a certification in progress."
+          title="School, honors, and certifications in progress."
         />
 
         <div className="mt-10 grid gap-4 lg:grid-cols-2">
@@ -20,7 +20,7 @@ export function Education() {
             <p className="mt-2 text-muted">
               {profile.college} · {profile.degree}
             </p>
-            <dl className="mt-6 grid gap-4 text-sm sm:grid-cols-2">
+            <dl className="mt-6 grid gap-4 text-base sm:grid-cols-2">
               <div>
                 <dt className="text-muted">Expected graduation</dt>
                 <dd className="mt-1 text-ink">{profile.graduation}</dd>
@@ -49,16 +49,18 @@ export function Education() {
           </article>
 
           <article className="card p-6 sm:p-7">
-            <p className="eyebrow">Certification</p>
-            <h3 className="mt-3 text-2xl font-medium tracking-[-0.03em] text-ink">CompTIA A+</h3>
-            <p className="mt-2 inline-flex rounded-full border border-line px-2.5 py-1 text-sm text-ink">
-              In progress
-            </p>
-            <p className="mt-5 text-muted">
-              I am currently studying computer hardware, operating systems, networking,
-              troubleshooting, and IT support fundamentals. I have not taken the exam, and I have
-              not earned the certification.
-            </p>
+            <p className="eyebrow">Certifications</p>
+            <ul className="mt-4 space-y-6">
+              {profile.certifications.map((certification) => (
+                <li key={certification.name}>
+                  <h3 className="text-2xl font-medium tracking-[-0.03em] text-ink">{certification.name}</h3>
+                  <p className="mt-2 inline-flex rounded-full border border-line px-2.5 py-1 text-base text-ink">
+                    {certification.status}
+                  </p>
+                  <p className="mt-3 text-muted">{certification.detail}</p>
+                </li>
+              ))}
+            </ul>
           </article>
         </div>
       </div>

@@ -43,7 +43,7 @@ export function Skills() {
           })}
         </ul>
 
-        <p className="mt-6 max-w-2xl text-sm text-muted">
+        <p className="mt-6 max-w-2xl text-muted">
           I also use Excel, Power BI, Power Query, and R in the data projects further down. Analysis
           work is part of my record. It is not the center of the roles I am applying for now.
           Outside of tools: fluent English and Spanish, customer service, and technical

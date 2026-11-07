@@ -108,11 +108,14 @@ export function Resume() {
         </section>
 
         <section>
-          <h2>Certification</h2>
-          <p>
-            <strong>CompTIA A+</strong> — In progress. Studying hardware, operating systems,
-            networking, troubleshooting, and IT support fundamentals. Not yet earned.
-          </p>
+          <h2>Certifications</h2>
+          <ul>
+            {profile.certifications.map((certification) => (
+              <li key={certification.name}>
+                <strong>{certification.name}</strong> — {certification.status}. Not yet earned.
+              </li>
+            ))}
+          </ul>
         </section>
       </article>
     </div>

@@ -47,7 +47,7 @@ export function Hero() {
         </div>
 
         <aside className="card p-6 sm:p-7" aria-label="Profile summary">
-          <dl className="space-y-5 text-sm">
+          <dl className="space-y-5 text-base">
             <div>
               <dt className="eyebrow">School</dt>
               <dd className="mt-2 text-base text-ink">{profile.schoolShort}</dd>
@@ -61,9 +61,10 @@ export function Hero() {
               <dd className="mt-2 text-ink">IT support, networking, systems, and infrastructure</dd>
             </div>
             <div>
-              <dt className="eyebrow">Certification</dt>
+              <dt className="eyebrow">Certifications</dt>
               <dd className="mt-2 text-ink">CompTIA A+</dd>
-              <dd className="text-muted">In progress. Not yet earned.</dd>
+              <dd className="text-ink">Google IT Support Professional Certificate</dd>
+              <dd className="text-muted">Both in progress. Neither is earned yet.</dd>
             </div>
           </dl>
         </aside>

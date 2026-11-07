@@ -34,7 +34,7 @@ export function ProjectFilter({
             type="button"
             aria-pressed={selected}
             onClick={() => onChange(filter.id)}
-            className={`shrink-0 rounded-full border px-3.5 py-2 text-sm ${
+            className={`shrink-0 rounded-full border px-3.5 py-2 text-base ${
               selected ? "border-ink bg-ink text-canvas" : "border-line text-ink hover:bg-panel-2"
             }`}
           >

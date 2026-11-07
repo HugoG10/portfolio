@@ -11,7 +11,7 @@ export function About() {
             index="01 — About"
             title="Curious about how systems actually behave."
           />
-          <div className="mt-8 max-w-2xl space-y-4 text-[1.05rem] leading-relaxed text-muted">
+          <div className="mt-8 max-w-2xl space-y-4 text-lg leading-relaxed text-muted">
             <p>
               I study computer science at {profile.schoolShort}. The work I want next is close to
               the computers and networks people rely on: a machine that is slow, a connection that
@@ -24,10 +24,11 @@ export function About() {
               deployed a live business website, including the domain, DNS, and HTTPS setup.
             </p>
             <p>
-              I am preparing for CompTIA A+. The studying covers hardware, operating systems,
-              networking, troubleshooting, and IT support fundamentals. I have not earned the
-              certification. Longer term I want to work in cybersecurity, after I have real
-              experience supporting systems and seeing how an organization runs its infrastructure.
+              I am preparing for CompTIA A+ and the Google IT Support Professional Certificate.
+              That study covers hardware, operating systems, networking, troubleshooting, and IT
+              support fundamentals. I have not earned either one. Longer term I want to work in
+              cybersecurity, after I have real experience supporting systems and seeing how an
+              organization runs its infrastructure.
             </p>
             <p>
               I am fluent in English and Spanish. I am looking for an internship or entry-level IT
@@ -41,7 +42,7 @@ export function About() {
           <p className="eyebrow">Education</p>
           <p className="mt-4 text-lg leading-snug font-medium text-ink">{profile.schoolShort}</p>
           <p className="mt-1 text-muted">{profile.degreeShort}</p>
-          <dl className="mt-5 space-y-3 border-t border-line pt-5 text-sm">
+          <dl className="mt-5 space-y-3 border-t border-line pt-5 text-base">
             <div className="flex justify-between gap-4">
               <dt className="text-muted">Graduation</dt>
               <dd className="text-ink">{profile.graduation}</dd>
