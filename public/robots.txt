@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hugog10.github.io/portfolio/sitemap.xml

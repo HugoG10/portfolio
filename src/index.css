@@ -1,0 +1,265 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --canvas: #0c0e12;
+  --panel: #141820;
+  --panel-2: #1c222c;
+  --line: rgba(232, 238, 246, 0.12);
+  --ink: #edf2f7;
+  --muted: #a8b3c2;
+  --faint: #93a0b2;
+  --accent: #9ec9f5;
+  --good: #8fceb0;
+  --header: 4.25rem;
+}
+
+:root.light {
+  color-scheme: light;
+  --canvas: #f4f6f8;
+  --panel: #ffffff;
+  --panel-2: #eef1f5;
+  --line: rgba(18, 24, 33, 0.12);
+  --ink: #15191f;
+  --muted: #4e5968;
+  --faint: #687384;
+  --accent: #0b57b8;
+  --good: #0c7a45;
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-good: var(--good);
+  --font-sans: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 1.125rem;
+    line-height: 1.7;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--accent) 35%, transparent);
+    color: var(--ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  .site-bar {
+    min-height: var(--header);
+  }
+
+  .skip {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    z-index: 70;
+    border-radius: 999px;
+    background: var(--ink);
+    color: var(--canvas);
+    padding: 0.6rem 0.9rem;
+    text-decoration: none;
+  }
+
+  .skip:focus {
+    top: 1rem;
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .btn {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-transparent px-4 py-2.5 text-[0.95rem] font-medium leading-none no-underline transition-colors;
+  }
+
+  .btn-primary {
+    background: var(--ink);
+    color: var(--canvas);
+  }
+
+  .btn-primary:hover {
+    background: color-mix(in srgb, var(--ink) 86%, var(--accent));
+  }
+
+  .btn-ghost {
+    @apply border-line bg-transparent text-ink;
+  }
+
+  .btn-ghost:hover {
+    @apply bg-panel-2;
+  }
+
+  .card {
+    @apply rounded-xl border border-line bg-panel;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[0.8rem] font-medium tracking-[0.14em] text-faint uppercase;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border border-line bg-panel-2 px-2.5 py-1 text-[0.92rem] leading-none text-muted;
+  }
+
+  .text-link {
+    @apply text-accent underline decoration-transparent underline-offset-[0.22em] transition-colors hover:decoration-current;
+  }
+}
+
+.status-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--good);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--good) 55%, transparent);
+  animation: pulse 2.6s ease-out infinite;
+}
+
+@keyframes pulse {
+  70% {
+    box-shadow: 0 0 0 7px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .arrow-shift {
+    transition: transform 160ms ease;
+  }
+
+  .group:hover .arrow-shift {
+    transform: translateX(3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .status-dot {
+    animation: none;
+  }
+}
+
+.resume-sheet {
+  width: min(100% - 2.5rem, 48rem);
+  margin: 0 auto;
+  background: #fff;
+  color: #1c2128;
+  border: 1px solid rgba(18, 24, 33, 0.12);
+  border-radius: 12px;
+  padding: 2rem 2.1rem 2.2rem;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.resume-sheet h1 {
+  font-size: 1.85rem;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
+
+.resume-sheet h2 {
+  margin-top: 1.05rem;
+  padding-top: 0.45rem;
+  border-top: 1px solid rgba(18, 24, 33, 0.12);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5c6774;
+  font-weight: 600;
+}
+
+.resume-role {
+  margin-top: 0.25rem;
+}
+
+.resume-contact,
+.resume-summary {
+  margin-top: 0.45rem;
+}
+
+.resume-sheet a {
+  color: #0b57b8;
+  text-decoration: none;
+}
+
+.resume-sheet ul {
+  margin: 0.35rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.resume-sheet li + li {
+  margin-top: 0.2rem;
+}
+
+.resume-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.45rem;
+}
+
+.resume-job {
+  margin-top: 0.55rem;
+}
+
+.resume-job ul {
+  margin-top: 0.15rem;
+}
+
+@media print {
+  @page {
+    size: letter;
+    margin: 0.5in;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .resume-sheet {
+    width: auto;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+}
