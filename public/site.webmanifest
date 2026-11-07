@@ -1,0 +1,16 @@
+{
+  "name": "Hugo Guerra-Garcia | IT & Computer Science Portfolio",
+  "short_name": "Hugo Guerra-Garcia",
+  "start_url": "/portfolio/",
+  "display": "standalone",
+  "background_color": "#0c0e12",
+  "theme_color": "#0c0e12",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
